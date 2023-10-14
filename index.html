@@ -11,38 +11,61 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <title>News-Examcart.in</title>
   <style>
-    .container::-webkit-scrollbar {
+    ::-webkit-scrollbar {
 
       height: 10px;
+
       /* Adjust the scrollbar width as needed */
     }
 
-    .container::-webkit-scrollbar-track {
+    ::-webkit-scrollbar-track {
       background: rgb(236, 236, 236);
       /* Set the track background color */
     }
 
-    .container::-webkit-scrollbar-thumb {
-      background-color: green;
+    ::-webkit-scrollbar-thumb {
+      background-color: rgb(176, 255, 176);
       /* Set the thumb color */
       border-radius: 10px;
     }
-   
+
     #pills-tab {
       width: 100%;
-      overflow-x:scroll; 
+      overflow-x: scroll;
     }
-    .nav-link{
-      color:rgb(255, 255, 255);
-   
+
+    .nav-link {
+      color: rgb(255, 255, 255);
+
     }
-    .nav-link:hover{
-      background-color: rgb(0, 150, 75);
+
+    .tab-custom-btn:hover {
       color: aliceblue;
     }
- 
-    button:active{
-      background-color: green;
+
+    .nav-pills .nav-link.active {
+      background-color: #198754;
+      color: #fff;
+    }
+
+    @media (max-width: 767.98px) {
+      ::-webkit-scrollbar {
+
+        height: 0px;
+
+
+      }
+
+      ::-webkit-scrollbar-track {
+        background: transparent;
+
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: transparent;
+        border-radius: 10px;
+      }
+
     }
   </style>
 </head>
@@ -50,106 +73,120 @@
 <body>
   <!-- central exam-wise tabs  -->
 
-  <div class="container bg-light p-4 mt-5 d-block">
-    <ul class="nav nav-pills mb-3 bg-dark py-2 px-3 rounded-3 d-flex flex-row flex-nowrap" id="pills-tab" role="tablist"  style="overflow-x: scroll;white-space: nowrap;">
+  <div class="container bg-light p-md-4 p-2 mt-5 d-block">
+    <ul class="nav nav-pills mb-3 bg-dark py-2 px-3 rounded-3 d-flex flex-row flex-nowrap" id="pills-tab" role="tablist"
+      style="overflow-x: scroll;white-space: nowrap;">
 
       <!-- tab 1 SSC -->
       <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="pills-ssc-tab" data-bs-toggle="pill" data-bs-target="#pills-ssc"
-          type="button" role="tab" aria-controls="pills-ssc" aria-selected="true">SSC</button>
+        <button class="nav-link tab-custom-btn active" id="pills-ssc-tab" data-bs-toggle="pill"
+          data-bs-target="#pills-ssc" type="button" role="tab" aria-controls="pills-ssc"
+          aria-selected="true">SSC</button>
       </li>
 
       <!-- tab 2 Bank -->
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-bank-tab" data-bs-toggle="pill" data-bs-target="#pills-bank" type="button"
-          role="tab" aria-controls="pills-bank" aria-selected="false">Bank</button>
+        <button class="nav-link tab-custom-btn" id="pills-bank-tab" data-bs-toggle="pill" data-bs-target="#pills-bank"
+          type="button" role="tab" aria-controls="pills-bank" aria-selected="false">Bank</button>
       </li>
 
       <!-- tab 3 defence  -->
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-defence-tab" data-bs-toggle="pill" data-bs-target="#pills-defence"
-          type="button" role="tab" aria-controls="pills-defence" aria-selected="false">Defence</button>
+        <button class="nav-link tab-custom-btn" id="pills-defence-tab" data-bs-toggle="pill"
+          data-bs-target="#pills-defence" type="button" role="tab" aria-controls="pills-defence"
+          aria-selected="false">Defence</button>
       </li>
 
       <!-- tab 4 railway-->
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-railway-tab" data-bs-toggle="pill" data-bs-target="#pills-railway"
-          type="button" role="tab" aria-controls="pills-railway" aria-selected="false">Railway</button>
+        <button class="nav-link tab-custom-btn" id="pills-railway-tab" data-bs-toggle="pill"
+          data-bs-target="#pills-railway" type="button" role="tab" aria-controls="pills-railway"
+          aria-selected="false">Railway</button>
       </li>
       <!-- tab upsc -->
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-upsc-tab" data-bs-toggle="pill" data-bs-target="#pills-upsc" type="button"
-          role="tab" aria-controls="pills-upsc" aria-selected="false">UPSC</button>
+        <button class="nav-link tab-custom-btn" id="pills-upsc-tab" data-bs-toggle="pill" data-bs-target="#pills-upsc"
+          type="button" role="tab" aria-controls="pills-upsc" aria-selected="false">UPSC</button>
       </li>
 
       <!-- tab teacher exam -->
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-teacher-tab" data-bs-toggle="pill" data-bs-target="#pills-teacher"
-          type="button" role="tab" aria-controls="pills-teacher" aria-selected="false">Teaching</button>
+        <button class="nav-link tab-custom-btn" id="pills-teacher-tab" data-bs-toggle="pill"
+          data-bs-target="#pills-teacher" type="button" role="tab" aria-controls="pills-teacher"
+          aria-selected="false">Teaching</button>
       </li>
       <!-- tab school -->
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-school-tab" data-bs-toggle="pill" data-bs-target="#pills-school"
-          type="button" role="tab" aria-controls="pills-school" aria-selected="false">School Enterance</button>
+        <button class="nav-link tab-custom-btn" id="pills-school-tab" data-bs-toggle="pill"
+          data-bs-target="#pills-school" type="button" role="tab" aria-controls="pills-school"
+          aria-selected="false">School Enterance</button>
       </li>
 
       <!-- tab up exam -->
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-up-exam-tab" data-bs-toggle="pill" data-bs-target="#pills-up-exam"
-          type="button" role="tab" aria-controls="pills-up-exam" aria-selected="false">UP Exams</button>
+        <button class="nav-link tab-custom-btn" id="pills-up-exam-tab" data-bs-toggle="pill"
+          data-bs-target="#pills-up-exam" type="button" role="tab" aria-controls="pills-up-exam"
+          aria-selected="false">UP Exams</button>
       </li>
       <!-- tab rajasthan -->
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-rajasthan-tab" data-bs-toggle="pill" data-bs-target="#pills-rajasthan"
-          type="button" role="tab" aria-controls="pills-rajasthan" aria-selected="false">Rajasthan</button>
+        <button class="nav-link tab-custom-btn" id="pills-rajasthan-tab" data-bs-toggle="pill"
+          data-bs-target="#pills-rajasthan" type="button" role="tab" aria-controls="pills-rajasthan"
+          aria-selected="false">Rajasthan</button>
       </li>
       <!-- tab bihar -->
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-bihar-tab" data-bs-toggle="pill" data-bs-target="#pills-bihar" type="button"
-          role="tab" aria-controls="pills-bihar" aria-selected="false">Bihar</button>
+        <button class="nav-link tab-custom-btn" id="pills-bihar-tab" data-bs-toggle="pill" data-bs-target="#pills-bihar"
+          type="button" role="tab" aria-controls="pills-bihar" aria-selected="false">Bihar</button>
       </li>
 
       <!-- tab uttrakhand -->
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-uttrakhand-tab" data-bs-toggle="pill" data-bs-target="#pills-uttrakhand"
-          type="button" role="tab" aria-controls="pills-uttrakhand" aria-selected="false">Uttarakhand</button>
+        <button class="nav-link tab-custom-btn" id="pills-uttrakhand-tab" data-bs-toggle="pill"
+          data-bs-target="#pills-uttrakhand" type="button" role="tab" aria-controls="pills-uttrakhand"
+          aria-selected="false">Uttarakhand</button>
       </li>
       <!-- tab punjab -->
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-punjab-tab" data-bs-toggle="pill" data-bs-target="#pills-punjab"
-          type="button" role="tab" aria-controls="pills-punjab" aria-selected="false">Punjab</button>
+        <button class="nav-link tab-custom-btn" id="pills-punjab-tab" data-bs-toggle="pill"
+          data-bs-target="#pills-punjab" type="button" role="tab" aria-controls="pills-punjab"
+          aria-selected="false">Punjab</button>
       </li>
       <!-- tab haryana -->
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-haryana-tab" data-bs-toggle="pill" data-bs-target="#pills-haryana"
-          type="button" role="tab" aria-controls="pills-haryana" aria-selected="false">Haryana</button>
+        <button class="nav-link tab-custom-btn" id="pills-haryana-tab" data-bs-toggle="pill"
+          data-bs-target="#pills-haryana" type="button" role="tab" aria-controls="pills-haryana"
+          aria-selected="false">Haryana</button>
       </li>
-      
+
       <!-- tab mpexam -->
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-mp-exam-tab" data-bs-toggle="pill" data-bs-target="#pills-mp-exam"
-          type="button" role="tab" aria-controls="pills-mp-exam" aria-selected="false">MP Exam</button>
+        <button class="nav-link tab-custom-btn" id="pills-mp-exam-tab" data-bs-toggle="pill"
+          data-bs-target="#pills-mp-exam" type="button" role="tab" aria-controls="pills-mp-exam"
+          aria-selected="false">MP Exam</button>
       </li>
       <!-- tab jharkhand -->
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-jharkhand-tab" data-bs-toggle="pill" data-bs-target="#pills-jharkhand"
-          type="button" role="tab" aria-controls="pills-jharkhand" aria-selected="false">Jharkhand</button>
+        <button class="nav-link tab-custom-btn" id="pills-jharkhand-tab" data-bs-toggle="pill"
+          data-bs-target="#pills-jharkhand" type="button" role="tab" aria-controls="pills-jharkhand"
+          aria-selected="false">Jharkhand</button>
       </li>
-      
+
       <!-- tab hp exams -->
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-hp-exam-tab" data-bs-toggle="pill" data-bs-target="#pills-hp-exam"
-          type="button" role="tab" aria-controls="pills-hp-exam" aria-selected="false">HP Exams</button>
+        <button class="nav-link tab-custom-btn" id="pills-hp-exam-tab" data-bs-toggle="pill"
+          data-bs-target="#pills-hp-exam" type="button" role="tab" aria-controls="pills-hp-exam"
+          aria-selected="false">HP Exams</button>
       </li>
-      
+
       <!-- tab Delhi -->
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-delhi-tab" data-bs-toggle="pill" data-bs-target="#pills-delhi"
+        <button class="nav-link tab-custom-btn" id="pills-delhi-tab" data-bs-toggle="pill" data-bs-target="#pills-delhi"
           type="button" role="tab" aria-controls="pills-delhi" aria-selected="false">Delhi</button>
       </li>
-      
+
     </ul>
-    
+
     <div class="tab-content" id="pills-tabContent">
 
       <!-- tab 1 SSC -->
@@ -159,10 +196,13 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/ssc-cgl-2023-notification-previous-year-paper"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Staff_Selection_Commission_Logo.jpg/220px-Staff_Selection_Commission_Logo.jpg" alt="" height="50px">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Staff_Selection_Commission_Logo.jpg/220px-Staff_Selection_Commission_Logo.jpg"
+                    alt="" height="50px">
                 </div>
                 <div class="text-center">
                   <p class="h6 mt-2">SSC CGL</p>
@@ -173,10 +213,13 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/ssc-chsl-2023"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Staff_Selection_Commission_Logo.jpg/220px-Staff_Selection_Commission_Logo.jpg" alt="" height="50px">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Staff_Selection_Commission_Logo.jpg/220px-Staff_Selection_Commission_Logo.jpg"
+                    alt="" height="50px">
                 </div>
                 <div class="text-center">
                   <p class="h6 mt-2">SSC CHSL</p>
@@ -187,10 +230,13 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/ssc-mts-2023-notification-syllabus-exam-pattern-best-books"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Staff_Selection_Commission_Logo.jpg/220px-Staff_Selection_Commission_Logo.jpg" alt="" height="50px">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Staff_Selection_Commission_Logo.jpg/220px-Staff_Selection_Commission_Logo.jpg"
+                    alt="" height="50px">
                 </div>
                 <div class="text-center">
                   <p class="h6 mt-2">SSC MTS</p>
@@ -201,10 +247,13 @@
           <!-- card  -->
           <div class="col">
             <a href="https://news.examcart.in/ssc-gd-constable-notification-vacancy-salary-apply-online-admit-card-selection-process"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Staff_Selection_Commission_Logo.jpg/220px-Staff_Selection_Commission_Logo.jpg" alt="" height="50px">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Staff_Selection_Commission_Logo.jpg/220px-Staff_Selection_Commission_Logo.jpg"
+                    alt="" height="50px">
                 </div>
                 <div class="text-center">
                   <p class="h6 mt-2">SSC GD</p>
@@ -215,10 +264,13 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/ssc-cpo-si-2022-notification-salary-exam-pattern-syllabus"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Staff_Selection_Commission_Logo.jpg/220px-Staff_Selection_Commission_Logo.jpg" alt="" height="50px">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Staff_Selection_Commission_Logo.jpg/220px-Staff_Selection_Commission_Logo.jpg"
+                    alt="" height="50px">
                 </div>
                 <div class="text-center">
                   <p class="h6 mt-2">SSC CPO</p>
@@ -229,10 +281,13 @@
           <!-- card  -->
           <div class="col">
             <a href="https://news.examcart.in/ssc-stenographer-grade-c-d-2023-notification-syllabus-books"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Staff_Selection_Commission_Logo.jpg/220px-Staff_Selection_Commission_Logo.jpg" alt="" height="50px">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Staff_Selection_Commission_Logo.jpg/220px-Staff_Selection_Commission_Logo.jpg"
+                    alt="" height="50px">
                 </div>
                 <div class="text-center">
                   <p class="h6 mt-2">SSC Steno</p>
@@ -243,10 +298,13 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/ssc-selection-post-2023-phase-11-notification"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Staff_Selection_Commission_Logo.jpg/220px-Staff_Selection_Commission_Logo.jpg" alt="" height="50px">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Staff_Selection_Commission_Logo.jpg/220px-Staff_Selection_Commission_Logo.jpg"
+                    alt="" height="50px">
                 </div>
                 <div class="text-center">
                   <p class="h6 mt-2">SSC Selection Post</p>
@@ -260,7 +318,9 @@
               style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Staff_Selection_Commission_Logo.jpg/220px-Staff_Selection_Commission_Logo.jpg" alt="" height="50px">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Staff_Selection_Commission_Logo.jpg/220px-Staff_Selection_Commission_Logo.jpg"
+                    alt="" height="50px">
                 </div>
                 <div class="text-center">
                   <p class="h6 mt-2">SSC JE</p>
@@ -274,7 +334,9 @@
               style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Staff_Selection_Commission_Logo.jpg/220px-Staff_Selection_Commission_Logo.jpg" alt="" height="50px">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Staff_Selection_Commission_Logo.jpg/220px-Staff_Selection_Commission_Logo.jpg"
+                    alt="" height="50px">
                 </div>
                 <div class="text-center">
                   <p class="h6 mt-2">SSC JHT</p>
@@ -288,7 +350,9 @@
               style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Staff_Selection_Commission_Logo.jpg/220px-Staff_Selection_Commission_Logo.jpg" alt="" height="50px">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Staff_Selection_Commission_Logo.jpg/220px-Staff_Selection_Commission_Logo.jpg"
+                    alt="" height="50px">
                 </div>
                 <div class="text-center">
                   <p class="h6 mt-2">SSC Scientific Assistant</p>
@@ -302,7 +366,9 @@
               style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Staff_Selection_Commission_Logo.jpg/220px-Staff_Selection_Commission_Logo.jpg" alt="" height="50px">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Staff_Selection_Commission_Logo.jpg/220px-Staff_Selection_Commission_Logo.jpg"
+                    alt="" height="50px">
                 </div>
                 <div class="text-center">
                   <p class="h6 mt-2">Delhi Police Driver</p>
@@ -313,10 +379,13 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/ib-recruitment-2023-result"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Staff_Selection_Commission_Logo.jpg/220px-Staff_Selection_Commission_Logo.jpg" alt="" height="50px">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Staff_Selection_Commission_Logo.jpg/220px-Staff_Selection_Commission_Logo.jpg"
+                    alt="" height="50px">
                 </div>
                 <div class="text-center">
                   <p class="h6 mt-2">IB Security Assistant & MTS</p>
@@ -333,7 +402,8 @@
         <div class="row row-cols-lg-5 row-cols-md-4 row-cols-2">
           <!-- card  -->
           <div class="col">
-            <a href="" class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+            <a href="" class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img src="https://assets.stickpng.com/images/61fc00073cf0e70004222069.png" alt="" height="45px">
@@ -347,7 +417,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/sbi-so-2023-notification-vacancy-salary-exam-pattern-syllabus"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img src="https://assets.stickpng.com/images/61fc00073cf0e70004222069.png" alt="" height="45px">
@@ -375,7 +446,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/sbi-clerk-2023-notification"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img src="https://assets.stickpng.com/images/61fc00073cf0e70004222069.png" alt="" height="45px">
@@ -419,7 +491,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/ibps-clerk-2023-notification-application-form-syllabus-exam-date"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img src="https://www.kopykitab.com/blog/wp-content/uploads/2022/07/Untitled-1-51-scaled.jpg" alt=""
@@ -494,7 +567,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/idbi-assistant-manager-2023-exam-date-result"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img src="https://s3-symbol-logo.tradingview.com/idbi-bank--big.svg" height="45px">
@@ -508,7 +582,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/ecgc-po-recruitment-2023-notification-eligibility-vacancy"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img src="https://main.ecgc.in/wp-content/themes/pcwebecgc/images/pcImglogo/ecgclogoEdit.jpg" alt=""
@@ -524,7 +599,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/bob-so-recruitment-2023"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img src="https://www.bankofbaroda.in/a2hs/BOB-Identifier-192x192.png" alt="" height="45px">
@@ -539,7 +615,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/rbi-grade-b-2023-notification-vacancy-salary-exam-pattern-syllabus"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img
@@ -556,7 +633,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/irdai-assistant-manager-recruitment-2023"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img src="https://www.renewbuy.com/sites/default/files/inline-images/irdai-logo1-01.jpg" alt=""
@@ -570,7 +648,8 @@
           </div>
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/lic-aao-2023-result"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img
@@ -594,7 +673,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://news.examcart.in/agniveer-vayu-recruitment-2024-notification-out-exam-pattern/"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img src="https://indianairforce.nic.in/wp-content/uploads/2020/09/iaf_logo.png" alt="" height="45px">
@@ -608,7 +688,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/indian-navy-ssr-2023-result"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img
@@ -624,7 +705,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/indian-navy-ssr-2023-result"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img
@@ -640,7 +722,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/army-agniveer-gd-2023-exam-date-admit-card-result"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img
@@ -656,7 +739,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/army-agniveer-technical-2023-admit-card-result"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img
@@ -672,7 +756,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/army-agniveer-clerk-skt-recruitment-2023-admit-card-result"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img
@@ -688,7 +773,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/army-agniveer-tradesman-2023-admit-card-result"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img
@@ -720,7 +806,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/nda-ii-2023-recruitment-details-syllabus-best-books-vacancies"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img
@@ -751,7 +838,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/itbp-head-constable-recruitment-2023-notification-syllabus-exam-pattern"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img
@@ -767,7 +855,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/itbp-constable-gd-2023-notification-vacancy"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img
@@ -783,7 +872,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/ssb-asi-steno-recruitment-2023-vacancy-exam-pattern-salary"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img
@@ -800,7 +890,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/navy-chargeman-recruitment-2023-notification-vacancy-salary-exam-pattern"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img
@@ -817,7 +908,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/navy-ssc-officers-recruitment-2024-notification-eligibility"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img
@@ -834,7 +926,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/capf-medical-officer-recruitment-2023"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img
@@ -851,7 +944,8 @@
 
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/crpf-constable-tradesman-recruitment-2023-notification"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img
@@ -868,7 +962,8 @@
 
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/army-tgc-138-recruitment-2023-notification-vacancy-salary"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img
@@ -885,7 +980,8 @@
 
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/aoc-recruitment-2023-trademan-fireman"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img
@@ -903,7 +999,8 @@
 
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/bsf-head-constable-engine-driver-2023-notification"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img
@@ -921,7 +1018,8 @@
 
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/bsf-constable-tradesman-2023"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img
@@ -939,7 +1037,8 @@
 
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/bsf-constable-generator-mechanic-2023-notification"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img
@@ -956,7 +1055,8 @@
 
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/bsf-si-group-b-recruitment-2023"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img
@@ -979,7 +1079,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/rrb-alp-2023-notification"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img
@@ -996,7 +1097,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/rrc-nwr-alp-2023-recruitment-notification"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img
@@ -1069,7 +1171,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/upsc-civil-service-exam-notification-eligibility-exam-dates"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img
@@ -1086,7 +1189,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/upsc-capf-ac-2023-notification-vacancy-exam-pattern-syllabus"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img
@@ -1103,7 +1207,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/upsc-cms-recruitment-2023-notification-vacancy-exam-pattern-salary"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img
@@ -1161,7 +1266,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/ctet-july-2023-application-form-exam-date-eligibility-admit-card-result-validity"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img
@@ -1178,7 +1284,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/ugc-net-2023-result"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img src="https://education.sakshi.com/sites/default/files/images/2022/07/05/ugc-net-1656995812.jpg"
@@ -1194,7 +1301,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/kvs-answer-key-2023-tgt-pgt-prt-exam-date-syllabus-salary"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img src="https://upload.wikimedia.org/wikipedia/en/0/05/Kendriya_Vidyalaya_Sangathan_logo.png" alt=""
@@ -1210,7 +1318,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/emrs-tgt-recruitment-2023-notification-vacancy-application-process-exam-date"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img src="https://emrs.tribal.gov.in/images/logo_emrs.jpg" alt="" height="45px">
@@ -1225,7 +1334,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/emrs-tgt-recruitment-2023-notification-vacancy-application-process-exam-date"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img src="https://emrs.tribal.gov.in/images/logo_emrs.jpg" alt="" height="45px">
@@ -1256,7 +1366,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/emrs-tgt-recruitment-2023-notification-vacancy-application-process-exam-date"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img src="https://emrs.tribal.gov.in/images/logo_emrs.jpg" alt="" height="45px">
@@ -1271,7 +1382,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/emrs-tgt-recruitment-2023-notification-vacancy-application-process-exam-date"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img src="https://emrs.tribal.gov.in/images/logo_emrs.jpg" alt="" height="45px">
@@ -1291,7 +1403,8 @@
           <!-- card  -->
           <div class="col">
             <a href=" https://examcart.in/blogs/uttar-pradesh/upsssc-auditor-and-assistant-accountant-recruitment-2023"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img
@@ -1308,7 +1421,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/uttar-pradesh/upsssc-enforcement-constable-recruitment-2023-online-form-exam-eligibility-vacancy-selection-process"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img
@@ -1324,7 +1438,8 @@
 
           <!-- card  -->
           <div class="col">
-            <a href="" class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+            <a href="" class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Uttar_Pradesh_Logo.png" alt=""
@@ -1338,7 +1453,8 @@
           </div>
           <!-- card  -->
           <div class="col">
-            <a href="" class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+            <a href="" class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Uttar_Pradesh_Logo.png" alt=""
@@ -1352,7 +1468,8 @@
           </div>
           <!-- card  -->
           <div class="col">
-            <a href="" class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+            <a href="" class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Uttar_Pradesh_Logo.png" alt=""
@@ -1585,7 +1702,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/bihar/bpsc-ldc-recruitment-2023-notification-syllabus-exam-date-vacancy"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img
@@ -1666,8 +1784,8 @@
 
           <!-- card  -->
           <div class="col">
-            <a href="#"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+            <a href="#" class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img src="https://sssc.uk.gov.in/logo/logo.png" alt="" height="45px">
@@ -1714,8 +1832,8 @@
 
           <!-- card  -->
           <div class="col">
-            <a href="#"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+            <a href="#" class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img
@@ -1751,11 +1869,14 @@
         <div class="row row-cols-lg-5 row-cols-md-4 row-cols-2">
           <!-- card  -->
           <div class="col">
-            <a href="https://examcart.in/blogs/central-exam/clerk-recruitment-in-punjab-and-haryana-high-court-result-2022" class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+            <a href="https://examcart.in/blogs/central-exam/clerk-recruitment-in-punjab-and-haryana-high-court-result-2022"
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
               style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
-                  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c5/Punjab_and_Haryana_High_Court_Logo.png/220px-Punjab_and_Haryana_High_Court_Logo.png" alt="" height="45px">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c5/Punjab_and_Haryana_High_Court_Logo.png/220px-Punjab_and_Haryana_High_Court_Logo.png"
+                    alt="" height="45px">
                 </div>
                 <div class=" text-center">
                   <p class="h6 mt-2">Haryana HC Clerk</p>
@@ -1766,8 +1887,8 @@
 
           <!-- card  -->
           <div class="col">
-            <a href="#"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+            <a href="#" class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img
@@ -1823,7 +1944,9 @@
               style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Madhyapradeshpoliceoriginalmono.png/140px-Madhyapradeshpoliceoriginalmono.png" alt="" height="45px">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Madhyapradeshpoliceoriginalmono.png/140px-Madhyapradeshpoliceoriginalmono.png"
+                    alt="" height="45px">
                 </div>
                 <div class=" text-center">
                   <p class="h6 mt-2">MP Police Constable</p>
@@ -1834,11 +1957,13 @@
 
           <!-- card  -->
           <div class="col">
-            <a href="#"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+            <a href="#" class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Madhyapradeshpoliceoriginalmono.png/140px-Madhyapradeshpoliceoriginalmono.png" alt="" height="45px">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Madhyapradeshpoliceoriginalmono.png/140px-Madhyapradeshpoliceoriginalmono.png"
+                    alt="" height="45px">
                 </div>
                 <div class=" text-center">
                   <p class="h6 mt-2">MP Police SI</p>
@@ -1846,7 +1971,7 @@
               </div>
             </a>
           </div>
-          
+
         </div>
       </div>
       <!-- tab 15 jharkhand-->
@@ -1870,7 +1995,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/jharkhand/jharkhand-teacher-recruitment-2023-notification-vacancy-apply-online-exam-date"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img src="https://i.ibb.co/6bwZTSs/jsssc.jpg" alt="" height="45px">
@@ -1881,11 +2007,12 @@
               </div>
             </a>
           </div>
-          
+
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/jharkhand/jharkhand-teacher-recruitment-2023-notification-vacancy-apply-online-exam-date"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img src="https://i.ibb.co/6bwZTSs/jsssc.jpg" alt="" height="45px">
@@ -1907,7 +2034,9 @@
               style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
-                  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9c/Himachal_Pradesh_Police_Logo.png/140px-Himachal_Pradesh_Police_Logo.png" alt="" height="45px">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9c/Himachal_Pradesh_Police_Logo.png/140px-Himachal_Pradesh_Police_Logo.png"
+                    alt="" height="45px">
                 </div>
                 <div class=" text-center">
                   <p class="h6 mt-2">HP Police Constable</p>
@@ -1918,11 +2047,13 @@
 
           <!-- card  -->
           <div class="col">
-            <a href="#"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+            <a href="#" class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
-                  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9c/Himachal_Pradesh_Police_Logo.png/140px-Himachal_Pradesh_Police_Logo.png" alt="" height="45px">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9c/Himachal_Pradesh_Police_Logo.png/140px-Himachal_Pradesh_Police_Logo.png"
+                    alt="" height="45px">
                 </div>
                 <div class=" text-center">
                   <p class="h6 mt-2">HP Police SI</p>
@@ -1930,7 +2061,7 @@
               </div>
             </a>
           </div>
-          
+
         </div>
       </div>
       <!-- tab 17 Delhi-->
@@ -1942,7 +2073,9 @@
               style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
-                  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/09/Delhi_Police_Logo.png/140px-Delhi_Police_Logo.png" alt="" height="45px">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/en/thumb/0/09/Delhi_Police_Logo.png/140px-Delhi_Police_Logo.png"
+                    alt="" height="45px">
                 </div>
                 <div class=" text-center">
                   <p class="h6 mt-2">DP Head Constable</p>
@@ -1953,11 +2086,13 @@
 
           <!-- card  -->
           <div class="col">
-            <a href="#"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+            <a href="#" class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
-                  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/09/Delhi_Police_Logo.png/140px-Delhi_Police_Logo.png" alt="" height="45px">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/en/thumb/0/09/Delhi_Police_Logo.png/140px-Delhi_Police_Logo.png"
+                    alt="" height="45px">
                 </div>
                 <div class=" text-center">
                   <p class="h6 mt-2">DP MTS (Civilian)</p>
@@ -1965,11 +2100,11 @@
               </div>
             </a>
           </div>
-          
+
           <!-- card  -->
           <div class="col">
-            <a href="#"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+            <a href="#" class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img src="https://dsssb.delhi.gov.in/sites/default/files/DSSSB/logo/dsssb.png" alt="" height="45px">
@@ -1983,7 +2118,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/dsssb-dtte-2023-admit-card"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img src="https://dsssb.delhi.gov.in/sites/default/files/DSSSB/logo/dsssb.png" alt="" height="45px">
@@ -1994,12 +2130,12 @@
               </div>
             </a>
           </div>
-          
-          
+
+
         </div>
       </div>
-       <!-- tab 18 School enterance-->
-       <div class="tab-pane fade" id="pills-school" role="tabpanel" aria-labelledby="pills-school-tab">
+      <!-- tab 18 School enterance-->
+      <div class="tab-pane fade" id="pills-school" role="tabpanel" aria-labelledby="pills-school-tab">
         <div class="row row-cols-lg-5 row-cols-md-4 row-cols-2">
           <!-- card  -->
           <div class="col">
@@ -2019,7 +2155,8 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/sainik-school-class-6-2024"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img src="https://www.sainiksatara.org/images/sainik_society_big.jpg" alt="" height="45px">
@@ -2030,14 +2167,16 @@
               </div>
             </a>
           </div>
-          
+
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/jnv-class-9-2023-syllabus-best-books-exam-pattern"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
-                  <img src="https://navodaya.gov.in/nvs/system/modules/NVS.WEB/resources/images/nvs_logo_color1.png" alt="" height="45px">
+                  <img src="https://navodaya.gov.in/nvs/system/modules/NVS.WEB/resources/images/nvs_logo_color1.png"
+                    alt="" height="45px">
                 </div>
                 <div class=" text-center">
                   <p class="h6 mt-2">JNV Class 9 </p>
@@ -2047,11 +2186,12 @@
           </div>
           <!-- card  -->
           <div class="col">
-            <a href="#"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+            <a href="#" class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
-                  <img src="https://navodaya.gov.in/nvs/system/modules/NVS.WEB/resources/images/nvs_logo_color1.png" alt="" height="45px">
+                  <img src="https://navodaya.gov.in/nvs/system/modules/NVS.WEB/resources/images/nvs_logo_color1.png"
+                    alt="" height="45px">
                 </div>
                 <div class=" text-center">
                   <p class="h6 mt-2">JNV Class 6 </p>
@@ -2059,11 +2199,12 @@
               </div>
             </a>
           </div>
-          
+
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/rms-cet-2024-admission-form-school-fee"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
                   <img src="https://i.ibb.co/P4b8NYz/rsm.png" alt="" height="45px">
@@ -2077,10 +2218,12 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/nta-cuet-ug-2023-notification-exam-date"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
-                  <img src="https://static.toiimg.com/thumb/msid-94213168,width-400,resizemode-4/94213168.jpg" alt="" height="45px">
+                  <img src="https://static.toiimg.com/thumb/msid-94213168,width-400,resizemode-4/94213168.jpg" alt=""
+                    height="45px">
                 </div>
                 <div class=" text-center">
                   <p class="h6 mt-2">NTA CUET UG</p>
@@ -2091,10 +2234,12 @@
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/kvs-admission-2023-application-form"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
-                  <img src="https://static.toiimg.com/thumb/msid-94213168,width-400,resizemode-4/94213168.jpg" alt="" height="45px">
+                  <img src="https://static.toiimg.com/thumb/msid-94213168,width-400,resizemode-4/94213168.jpg" alt=""
+                    height="45px">
                 </div>
                 <div class=" text-center">
                   <p class="h6 mt-2">NTA CUET PG</p>
@@ -2102,14 +2247,16 @@
               </div>
             </a>
           </div>
-          
+
           <!-- card  -->
           <div class="col">
             <a href="https://examcart.in/blogs/central-exam/kvs-admission-2023-application-form"
-              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark" style="max-width: 240px; min-height: 80px;">
+              class="card my-2 p-md-2 p-1 shadow-sm text-decoration-none text-dark"
+              style="max-width: 240px; min-height: 80px;">
               <div class="d-flex justify-content-around align-items-center flex-column pt-2">
                 <div>
-                  <img src="https://static.toiimg.com/thumb/msid-94213168,width-400,resizemode-4/94213168.jpg" alt="" height="45px">
+                  <img src="https://static.toiimg.com/thumb/msid-94213168,width-400,resizemode-4/94213168.jpg" alt=""
+                    height="45px">
                 </div>
                 <div class=" text-center">
                   <p class="h6 mt-2">KVS Class 1-11</p>
@@ -2123,9 +2270,9 @@
     </div>
   </div>
 
-  
-  
-  
+
+
+
   <!--Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
